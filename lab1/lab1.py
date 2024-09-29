@@ -1,4 +1,4 @@
-#lab1, ооп паттерн
+#lab1, ооп
 from sys import stdin
 
 class Solution:
@@ -41,9 +41,6 @@ def main():
 				break
 
 	ans = Solve(a[0],a[1],a[2])
-	
 	ans.RootPrint()
-
-
 if __name__ == "__main__":
 	main()

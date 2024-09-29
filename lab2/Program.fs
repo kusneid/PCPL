@@ -1,4 +1,4 @@
-﻿let Func first second third =
+﻿let FuncVar first second third =
     let a = unbox<int> first
     let b = unbox<float> second
     let c = unbox<string> third
@@ -43,12 +43,10 @@ let FuncList1 (arr: int list) : int list =
         |> List.filter (fun x -> x % 2 = 1)
 
     res
-//|>List.max
 
 let FuncList2 (arr: int list) : int list =
     let operation =
         List.map (fun x -> x * 2) >> List.sort >> List.filter (fun x -> x % 2 = 1)
-    //>> List.fold
 
     let res = operation arr
     res
@@ -61,7 +59,7 @@ let FuncList3 (arr1: int list, arr2: int list) : (int * int) list =
 
 
 let main argv =
-    let result = FuncList3([ 1..7 ], [ 1..7 ]) //Func2_2([ 1..7 ]) //FuncList() //SecondTry  //SumFloat(1, 3, 2) //Func (box 1) (box 2.5) (box "wfe")
+    let result = 1//Func2_2([ 1..7 ])//FuncList3([ 1..7 ], [ 1..7 ]) //Func2_2([ 1..7 ]) //FuncList() //SecondTry  //SumFloat(1, 3, 2) //FuncVar (box 1) (box 2.5) (box "wfe")
     printfn "%A" result
     0
 
