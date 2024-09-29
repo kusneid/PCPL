@@ -8,7 +8,7 @@ from gen_random import gen_random
 from field import field
 
 
-path = 'Python2/data_light.json'
+path = 'lab3-4/data_light.json'
 
 with open(path) as f:
     data = json.load(f)
