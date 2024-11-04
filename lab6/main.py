@@ -57,8 +57,12 @@ async def second_number(update: Update, context):
         await update.message.reply_text('enter correct num.')
         return secondNum
 
+async def cancel(update: Update, context):
+    await update.message.reply_text('Operation canceled.')
+    return ConversationHandler.END
+
 def main():
-    application = ApplicationBuilder().token('7686284369:AAGa8ZzSdkVjX-jqTcCbLZkzlbCmnrawa_Q').build()
+    application = ApplicationBuilder().token('токенчик').build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
@@ -67,6 +71,7 @@ def main():
             operation: [CallbackQueryHandler(operation)],
             secondNum: [MessageHandler(filters.TEXT & ~filters.COMMAND, second_number)],
         },
+        fallbacks=[CommandHandler('cancel', cancel)]
     )
 
     application.add_handler(conv_handler)

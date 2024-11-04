@@ -69,12 +69,10 @@ class Circle extends Figure {
     }
 }
 
-// Интерфейс для печати информации
 interface IPrint {
     void print();
 }
 
-// Основной класс программы
 public class Main {
     public static void main(String[] args) {
         Rectangle rectangle = new Rectangle(5.0, 3.0);

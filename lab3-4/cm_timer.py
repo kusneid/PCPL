@@ -25,7 +25,7 @@ def main():
 
     print("\ncm2:")
     with cm_timer_2():
-        sleep(2)
+        sleep(0.5)
 
 if __name__ == "__main__":
     main()

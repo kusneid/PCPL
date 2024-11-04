@@ -1,5 +1,4 @@
 import json
-import sys
 
 from unique import Unique
 from print_result import print_result
@@ -16,7 +15,7 @@ with open(path) as f:
 
 @print_result
 def f1(arg):
-    return (i for i in Unique(field(arg,'job-name'), ignore_case = True))
+    return list(i for i in Unique(field(arg,'job-name'), ignore_case = True))
 
 
 @print_result
